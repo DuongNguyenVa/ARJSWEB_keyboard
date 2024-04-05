@@ -1,0 +1,204 @@
+<script src="https://cdn.jsdelivr.net/gh/aframevr/aframe@1.3.0/dist/aframe-master.min.js"></script>
+<script src="./data/aframe/aframe-ar-nft.js"></script>
+
+</script>
+<style>
+  .arjs-loader {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .arjs-loader div {
+    text-align: center;
+    font-size: 1.25em;
+    color: white;
+  }
+ 
+</style>
+<style>
+    .mask {
+        display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  width:75%;
+      opacity: 0.5;
+     margin-top: 10%;
+    }
+
+  </style>
+
+<script>
+    var isFound=false;
+  AFRAME.registerComponent('markerhandler', {
+ init: function () {
+  console.log("start");
+
+   this.el.sceneEl.addEventListener('markerFound', (e) => {
+  console.log("found"); 
+    if(isFound==false){
+        window.open('https://duongnguyenva.github.io/penatyminigame/');
+        isFound=true;
+
+        var  mask = document.getElementById("mask");
+        
+        mask.style.display = "none";
+    }    
+   })
+   this.el.sceneEl.addEventListener('markerLost', (e) => { 
+    isFound=false;    
+    console.log("Lost");
+    var  mask = document.getElementById("mask");
+        
+        mask.style.display = "block";
+  })
+ }
+});
+</script>
+<body style='margin : 0px; overflow: hidden;'>
+    
+  <div class="arjs-loader">
+    <div>Loading camera, please wait...</div>  
+   
+  </div> 
+ 
+
+    <a-scene
+        vr-mode-ui='enabled: false;'
+        renderer="logarithmicDepthBuffer: true; precision: medium;"
+        embedded arjs='trackingMethod: best; sourceType: webcam; debugUIEnabled: false;'>  
+        
+         <img id="mask" class="mask" src="./data/images/kb64.png" alt="keyboard">     
+
+        
+          
+<!-- kb1 -->
+        <a-nft
+        markerhandler
+            type='nft' url="./arjs_localFile_test/data/keyboard/kb1/kb1"
+            smooth='true' smoothCount='10' smoothTolerance='0.01' smoothThreshold='5'>
+        </a-nft>
+<!-- kb2 -->
+
+        <a-nft
+        markerhandler
+            type='nft' url="./arjs_localFile_test/data/keyboard/kb2/kb2"
+            smooth='true' smoothCount='10' smoothTolerance='0.01' smoothThreshold='5'>
+        </a-nft>
+<!-- kb3 -->
+
+<a-nft
+markerhandler
+    type='nft' url="./arjs_localFile_test/data/keyboard/kb3/kb3"
+    smooth='true' smoothCount='10' smoothTolerance='0.01' smoothThreshold='5'>
+</a-nft>
+<!-- kb4 -->
+<a-nft
+markerhandler
+    type='nft' url="./arjs_localFile_test/data/keyboard/kb4/kb4"
+    smooth='true' smoothCount='10' smoothTolerance='0.01' smoothThreshold='5'>
+</a-nft>
+<!-- kb4 -->
+<a-nft
+markerhandler
+    type='nft' url="./arjs_localFile_test/data/keyboard/kb60/kb60"
+    smooth='true' smoothCount='10' smoothTolerance='0.01' smoothThreshold='5'>
+</a-nft>
+<!-- kb4 -->
+<a-nft
+markerhandler
+    type='nft' url="./arjs_localFile_test/data/keyboard/kb61/kb61"
+    smooth='true' smoothCount='10' smoothTolerance='0.01' smoothThreshold='5'>
+</a-nft>
+<!-- kb4 -->
+<a-nft
+markerhandler
+    type='nft' url="./arjs_localFile_test/data/keyboard/kb62/kb62"
+    smooth='true' smoothCount='10' smoothTolerance='0.01' smoothThreshold='5'>
+</a-nft>
+<!-- kb4 -->
+<a-nft
+markerhandler
+    type='nft' url="./arjs_localFile_test/data/keyboard/kb63/kb63"
+    smooth='true' smoothCount='10' smoothTolerance='0.01' smoothThreshold='5'>
+</a-nft>
+<!-- kb4 -->
+<a-nft
+markerhandler
+    type='nft' url="./arjs_localFile_test/data/keyboard/kb64/kb64"
+    smooth='true' smoothCount='10' smoothTolerance='0.01' smoothThreshold='5'>
+</a-nft>
+<!-- kb4 -->
+<a-nft
+markerhandler
+    type='nft' url="./arjs_localFile_test/data/keyboard/kb65/kb65"
+    smooth='true' smoothCount='10' smoothTolerance='0.01' smoothThreshold='5'>
+</a-nft>
+<!-- kb4 -->
+<a-nft
+markerhandler
+    type='nft' url="./arjs_localFile_test/data/keyboard/kb66/kb66"
+    smooth='true' smoothCount='10' smoothTolerance='0.01' smoothThreshold='5'>
+</a-nft>
+<!-- kb4 -->
+<a-nft
+markerhandler
+    type='nft' url="./arjs_localFile_test/data/keyboard/kb67/kb67"
+    smooth='true' smoothCount='10' smoothTolerance='0.01' smoothThreshold='5'>
+</a-nft>
+<!-- kb4 -->
+<a-nft
+markerhandler
+    type='nft' url="./arjs_localFile_test/data/keyboard/kb68/kb68"
+    smooth='true' smoothCount='10' smoothTolerance='0.01' smoothThreshold='5'>
+</a-nft>
+<!-- kb4 -->
+<a-nft
+markerhandler
+    type='nft' url="./arjs_localFile_test/data/keyboard/kb69/kb69"
+    smooth='true' smoothCount='10' smoothTolerance='0.01' smoothThreshold='5'>
+</a-nft>
+<!-- kb4 -->
+<a-nft
+markerhandler
+    type='nft' url="./arjs_localFile_test/data/keyboard/kb70/kb70"
+    smooth='true' smoothCount='10' smoothTolerance='0.01' smoothThreshold='5'>
+</a-nft>
+<!-- kb4 -->
+<a-nft
+markerhandler
+    type='nft' url="./arjs_localFile_test/data/keyboard/kb71/kb71"
+    smooth='true' smoothCount='10' smoothTolerance='0.01' smoothThreshold='5'>
+</a-nft>
+<!-- kb4 -->
+<a-nft
+markerhandler
+    type='nft' url="./arjs_localFile_test/data/keyboard/kb72/kb72"
+    smooth='true' smoothCount='10' smoothTolerance='0.01' smoothThreshold='5'>
+</a-nft>
+<!-- kb4 -->
+<a-nft
+markerhandler
+    type='nft' url="./arjs_localFile_test/data/keyboard/kb73/kb73"
+    smooth='true' smoothCount='10' smoothTolerance='0.01' smoothThreshold='5'>
+</a-nft>
+<!-- kb4 -->
+<a-nft
+markerhandler
+    type='nft' url="./arjs_localFile_test/data/keyboard/kb74/kb74"
+    smooth='true' smoothCount='10' smoothTolerance='0.01' smoothThreshold='5'>
+</a-nft>
+
+
+		<a-entity camera>
+        </a-entity>
+    </a-scene>
+</body>
+<!-- type='nft' url="./arjs_localFile_test/data/girl/girl" -->
